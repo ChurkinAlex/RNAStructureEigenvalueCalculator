@@ -8,10 +8,8 @@ import java.io.IOException;
 
 public class SecondEigenvalueCalculator {
 	
-	
-	
 	public static double calcEig(double[][] mat) {
-		  Matrix A = new Matrix(mat);
+	      Matrix A = new Matrix(mat);
 	      EigenvalueDecomposition e = A.eig();
 	      double [] realPart = e.getRealEigenvalues();
 	      
@@ -19,19 +17,15 @@ public class SecondEigenvalueCalculator {
 	      return realPart[1];
 	}
 	
-	
-	
 	public static double[][] makeLaplacianMatrix(String shapiro){
 		  double[][] matrix;
 		  int sizeOfMatrix , sizeOfShapiro;
-		  //int i,k;
 		  int numOfParens=0;
 		  int node1=0, node2=0;
 		  int isNode=0;
 		  int isS=0;
 		  int count;
 		  String newShapiro="";
-		  //int j=0;
 		  
 		  sizeOfShapiro = shapiro.length();
 		  sizeOfMatrix = 0;
@@ -107,7 +101,6 @@ public class SecondEigenvalueCalculator {
 		  return matrix;
 		}
 
-
 	
 	public static String reverseComplement(String seq) {
 		String rev = "";
@@ -134,7 +127,6 @@ public class SecondEigenvalueCalculator {
 		
 		return rev;
 	}
-	
 	
 	public static void analyzeStructs() throws IOException{
 		String file = "D:\\structs2.txt";
@@ -194,7 +186,6 @@ public class SecondEigenvalueCalculator {
 	}
 	
 	
-
 	
 	public static void main(String[] args) throws IOException  {
 		analyzeStructs();		
